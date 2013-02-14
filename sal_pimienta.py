@@ -12,9 +12,9 @@ from time import *
 
 def sal_pimienta():
 
-  t = time()
+	t = time()
 
-	image = Image.open("escalagris.jpg")
+	image = Image.open("tig.jpg")
 
 	foto = image.load()
 
@@ -30,19 +30,21 @@ def sal_pimienta():
 
 			if (K%15 == 0):
 
-				cambio = 255
+				#cambio = 255
 
-				foto[i,j] = (cambio,cambio,cambio)
+				foto[i,j] = (255,255,255)
+				#print foto[i,j]
 
 			elif(K%15 == 1):
 
-				cambio = 0
+				#cambio = 0
 
-				foto[i,j] = (cambio,cambio,cambio)
+				foto[i,j] = (0,0,0)
 
-			
+				#print foto[i,j]	
+		
 
-	new = 'salpimienta.jpg'
+	new = 'salpimienta4.jpg'
 
 	image.save(new)
 
