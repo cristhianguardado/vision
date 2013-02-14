@@ -1,5 +1,7 @@
 import pygame, sys, os
 
+import pygame, sys, os
+
 from pygame.locals import*
 
 import Image
@@ -12,17 +14,15 @@ from time import *
 
 def eliminar():
 
-  t1 = time()
+	t1 = time()
 
-	image = Image.open("salpimienta.jpg")
+	image = Image.open("salpimienta4.jpg")
 
 	foto1 = image.load()
 
 	x,y = image.size
 
-	#rgb = 0
-
-	rgb1 = 0
+	b = 0
 
 	 
 
@@ -32,27 +32,32 @@ def eliminar():
 
 		  prom = 0
 
-		  rgb1 = 0
+		  b = 0
 
 		  
 
-		  if(foto1[i,j] == (255,255,255) or foto1[i,j] == (0,0)):
+		  
 
-			#rgb+=1
+		  if(foto1[i,j] == (255,255,255) or foto1[i,j] == (0,0,0)):
+
+			#print '*'
 
 			try: 
 
 			   if (foto1[i-1,j]):
+				#print '*'
 
 				if(foto1[i-1,j]==(255,255,255) or foto1[i-1,j] == (0,0,0)):
 
 					prom+=0
+					#print '*'
 
 				else:
 
-					prom+=foto1[i-1,j][0]
+					prom += foto1[i-1,j][0]
 
-					rgb1+=1
+					b += 1
+					#print '*'
 
 			except:
 
@@ -66,13 +71,13 @@ def eliminar():
 
 				if(foto1[i+1,j]==(255,255,255) or foto1[i+1,j] == (0,0,0)):
 
-					prom+=0
+					prom += 0
 
 				else:
 
-					prom+=foto1[i+1,j][0]
+					prom += foto1[i+1,j][0]
 
-					rgb1+=1
+					b += 1 
 
 			except:
 
@@ -84,13 +89,13 @@ def eliminar():
 
 				if(foto1[i,j-1]==(255,255,255) or foto1[i,j-1] == (0,0,0)):
 
-					prom+=0
+					prom += 0
 
 				else:
 
-					prom+=foto1[i,j-1][0]
+					prom += foto1[i,j-1][0]
 
-					rgb1+=1
+					b += 1
 
 			except:
 
@@ -106,9 +111,9 @@ def eliminar():
 
 				else:
 
-					prom+=foto1[i,j+1][0]
+					prom += foto1[i,j+1][0]
 
-					rgb1+=1
+					b += 1
 
 			except:
 
@@ -118,19 +123,26 @@ def eliminar():
 
 			try:
 
-			   nuevo = prom/rgb1
+			    nuevo = prom/b
 
-			   foto1[i,j] = (nuevo,nuevo,nuevo)
+			    foto1[i,j]=(nuevo,nuevo,nuevo)
 
 			except:
 
 			   pass
+			#print nuevo
+
+			#print b	
+
+			#print prom
 
 	
 
-	print nuevo
+	#print nuevo
 
-	print rgb1	
+	#print b
+
+	#print prom	
 
 	new = 'sinsalpimienta.jpg'
 
