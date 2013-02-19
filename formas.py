@@ -16,7 +16,7 @@ import ImageDraw
 
 def image():
 
-  
+	
 
 	image = Image.open("binarizacion.jpg")
 
@@ -48,7 +48,7 @@ def image():
 
 				d = (float(z)/float(a)) * 100.0	
 
-				#print "a"			
+					
 
 				if d > 0.5:
 
@@ -56,13 +56,13 @@ def image():
 
 					porc.append([d, (relleno)])
 
-					print "pintar %s"%tiene
+					print "pintar # %s  " %tiene
 
 					tiene += 1
 
-					#print "a1"
+					
 
-					print 'termino1'
+					
 
 
 
@@ -80,7 +80,7 @@ def image():
 
 	
 
-				#print "a2"
+				
 
 	nueva = 'fondo.jpg'
 
@@ -102,7 +102,7 @@ def image():
 
 		r += 1
 
-		#print "a3"	
+			
 
 	tiene = 0
 
@@ -112,7 +112,7 @@ def image():
 
 		tiene += 1
 
-		#print "a4"
+		
 
 	
 
@@ -158,14 +158,13 @@ def bfs(image,relleno,i,j):
 
 					xx, zz = (p + px, q + py)
 
-					#print "a5"
+					
 
 					if xx >= 0 and xx < x and zz >= 0 and zz < y: 
 
 						tiene = foto[xx,zz]
 
-						#print "a6"
-
+						
 						if tiene == prim:
 
 							foto[xx,zz] = relleno 
@@ -178,7 +177,7 @@ def bfs(image,relleno,i,j):
 
 							c.append((xx,zz))
 
-							#print "a7"
+							
 
 	forma = image.save('formas.jpg')
 
