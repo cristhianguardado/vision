@@ -110,8 +110,6 @@ def circulos(imagen):
 
 	suma = 0.0
 
-	#print "suma" 
-
 	for  i in range (y):
 
 		for j in range (x):
@@ -151,8 +149,6 @@ def circulos(imagen):
 		draw.elipse((p-r, q-r, p+r, q+r),fill=None)
 		r += 1
 	m += 1
-	print vote
-
 	new = 'circulos_new.jpg'
 
  	d = image.save(new)
