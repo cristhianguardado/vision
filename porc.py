@@ -50,6 +50,6 @@ for i in range(0, len(color),2):
 
 	a += 1
 
-image.save("relleno")
+image.save("porcentaje_elipse_bordes.png")
 
 			
