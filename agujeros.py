@@ -335,7 +335,7 @@ def main():
 
 	
 
-	image3.save("bfs_final.png")
+	image3.save("bfs_agujero.png")
 
 main()
 
