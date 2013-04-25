@@ -6,7 +6,7 @@ from sys import argv
 
 
 def histo(image, hor, ver):
-  plt.clf()
+	plt.clf()
 	fig = plt.subplot(111)
 	topx = max(hor)
 	topy = max(ver)
@@ -36,6 +36,7 @@ def histo(image, hor, ver):
 	fig.legend(loc = 'upper center', bbox_to_anchor=(0.5, -0.05),
 	
 	plt.show()
+	return histo
 	
 
 
@@ -141,7 +142,7 @@ def cruce(image):
 
 	image.save("cruce.png")
 
-	return ptsx, ptsy
+	return ptsx, ptsy, hor, ver
 
 
 
@@ -226,6 +227,7 @@ def main():
 	image = Image.open(ima1)
 
 	ptsx, ptsy = cruce(image)
+	histo(image, hor, ver)
 
 	c = []
 
@@ -337,5 +339,4 @@ def main():
 
 main()
 
-				
-
+		
