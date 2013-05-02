@@ -6,8 +6,7 @@ import random
 from sys import argv
 
 def convolucion(x,y,foto):
-    t = time()
-    image = Image.open("a.png")
+    image = Image.open("pol.png")
     foto = image.load()
     alto, ancho = image.size
     
